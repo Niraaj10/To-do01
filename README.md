@@ -15,7 +15,7 @@ This is an advanced To-Do application built with React, Redux, and Tailwind CSS.
 
 ## Features
 1. **Task Management:**
-   - Add tasks with priorities (High, Medium, Low).
+   - Add tasks with date and Importance.
    - View and delete tasks.
    - Persistent storage using `localStorage`.
 
@@ -24,10 +24,10 @@ This is an advanced To-Do application built with React, Redux, and Tailwind CSS.
    - Protect tasks behind authentication.
 
 3. **API Integration:**
-   - Fetch weather data using the OpenWeatherMap API for tasks related to outdoor activities.
+   - Fetch weather data using the weatherstack API for tasks related to outdoor activities.
 
 4. **Responsive Design:**
-   - Fully responsive for mobile, tablet, and desktop devices using Material-UI components and CSS Grid/Flexbox.
+   - Fully responsive for mobile, tablet, and desktop devices.
 
 5. **Error Handling:**
    - Graceful handling of API errors with user-friendly messages.
