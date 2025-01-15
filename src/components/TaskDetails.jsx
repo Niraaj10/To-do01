@@ -11,7 +11,7 @@ const TaskDetails = ({ task, isOpen, onClose, weather }) => {
 
     return (
         <div
-            className={`fixed top-0 right-0 h-full pt-10 w-[30vw] bg-[#e3ffe2] shadow-lg transform ${isOpen ? "translate-x-0" : "translate-x-full"
+            className={`fixed top-0 right-0 h-full pt-10 w-[90vw] md:w-[30vw] lg:w-[30vw]  bg-[#e3ffe2] shadow-lg transform ${isOpen ? "translate-x-0" : "translate-x-full"
                 } transition-transform duration-300 z-9`}
         >
             <div className="p-6">

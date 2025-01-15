@@ -21,7 +21,9 @@ const Login = () => {
 
   return (
     <div className="w-full h-screen bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#33425b] via-[#87dfd6] to-[#38817a] flex items-center justify-center">
-      <div className="h-[60vh] w-[30vw] bg-[#f2f2f21b] flex flex-col items-center justify-center rounded-lg shadow-lg backdrop-blur-xl gap-10">
+      <div className="h-[60vh] w-[80vw] lg:w-[30vw] bg-[#f2f2f21b] flex flex-col items-center justify-center rounded-lg shadow-lg backdrop-blur-xl gap-10">
+        <h1 className="text-5xl text-white font-bold">DoIt</h1>
+        <div>You can use anything its just a demo</div>
         <input
           type="text"
           value={username}

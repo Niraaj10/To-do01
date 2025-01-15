@@ -6,7 +6,7 @@ import ProtectedRoute from "./components/auth/ProtectedRoute";
 import Header from "./components/Header";
 
 const App = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true); 
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false); 
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen); 

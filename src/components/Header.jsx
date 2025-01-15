@@ -18,14 +18,14 @@ const Header = ({ toggleSidebar }) => {
       };
   return (
     <>
-        <header className='w-full p-4 px-14 flex justify-between fixed top-0 z-10 border-b border-green-200 backdrop-blur-lg'>
+        <header className='w-full p-4 px-4 md:px-14 lg:px-14 flex justify-between items-center fixed top-0 z-10 border-b border-green-200 backdrop-blur-lg'>
             <div className='flex gap-6 items-center'>
                 <div><img src={Menu} alt="" onClick={toggleSidebar}/></div>
                 <div><img src={logo} alt="" /></div>
                 
             </div>
             <div>
-                <ul className='flex gap-6 items-center'>
+                <ul className='flex gap-2 md:gap-6 lg:gap-6 items-center'>
                     <li><img src={search} alt="" /></li>
                     <li><img src={appgrid} alt="" /></li>
                     <li><img src={moods} alt="" /></li> 

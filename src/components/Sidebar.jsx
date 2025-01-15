@@ -10,8 +10,8 @@ const Sidebar = ({ view, user, tasks, onViewChange, isSidebarOpen }) => {
 
 
     return (
-        <aside className={`sidebar mt-20 pt-28 p-4 h-[90vh] transition-all duration-200 ${
-            isSidebarOpen ? "w-[25vw]" : "w-0 "
+        <aside className={`sidebar absolute md:static lg:static mt-28 bg-white md:mt-20 lg:mt-20 md:pt-28 lg:pt-28 p-4 h-[90vh] transition-all duration-200 ${
+            isSidebarOpen ? "w-full md:w-[25vw] lg:w-[25vw]" : "w-0 "
           } `}>
             <div className={`bg-[#e3ffe2] h-full px-6 ${
             isSidebarOpen ? " block" : " hidden"
