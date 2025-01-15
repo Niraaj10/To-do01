@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { logout } from "../../redux/slices/authSlice";
+import logoutt from '../../assets/svg/logout.svg'
 
 const Logout = () => {
   const dispatch = useDispatch();
@@ -9,7 +10,10 @@ const Logout = () => {
     dispatch(logout());
   };
 
-  return <button onClick={handleLogout}>Logout</button>;
+  return <button onClick={handleLogout}>
+    {/* Logout */}
+    <img src={logoutt} alt="" className="w-6"/>
+  </button>;
 };
 
 export default Logout;

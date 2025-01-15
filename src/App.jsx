@@ -1,22 +1,16 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import TaskInput from "./components/InputToDo";
-import TaskList from "./components/ToDoList";
+import MainContainer from "./components/ContainerMain.jsx"
 import LoginForm from "./components/auth/Login";
-import LogoutButton from "./components/auth/Logout";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
-import Sidebar from "./components/Sidebar";
-import { useSelector } from "react-redux";
 import Header from "./components/Header";
 
 const App = () => {
-  const [view, setView] = useState("all"); 
-  const user = useSelector((state) => state.auth.user);
-  const tasks = useSelector((state) => state.tasks);
-  console.log("task :",tasks)
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true); 
 
-  const handleViewChange = (newView) => {
-    setView(newView);
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen); 
+    // console.log('object')
   };
 
   return (
@@ -28,12 +22,9 @@ const App = () => {
             path="/"
             element={
               <ProtectedRoute>
-                <Header />
+                <Header toggleSidebar={toggleSidebar}/>
                 <div className="flex w-full justify-center items-center"> 
-                <Sidebar user={user} tasks={tasks} onViewChange={handleViewChange}/>
-                <TaskInput />
-                <TaskList view={view}/>
-                <LogoutButton />
+                <MainContainer isSidebarOpen={isSidebarOpen}/>
                 </div>
               </ProtectedRoute>
             }
